@@ -7,8 +7,8 @@
 .header {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(./images/hero-bg.png);
-  background-position: center;
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(./images/home.jpg);
+  background-position: 50 10;
   background-size: cover;
   position: relative;
 }
@@ -18,9 +18,24 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  text-decoration: none;
+}
+.nav-logo-text {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #f44336;
+}
 nav img{
-  width: 30px;
-  background-color: white;
+  width: 50px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
 }
 .nav-links {
   flex: 1;
@@ -168,12 +183,22 @@ h3 {
   text-align: center;
   padding-top: 50px;
 }
+.campus .row {
+  justify-content: center;
+}
 .campus-col {
-  flex-basis: 32%;
+  flex: 0 0 32%;
+  max-width: 32%;
   border-radius: 10px;
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
+}
+.campus-col.left {
+  margin-right: 2em;
+}
+.campus-col.right {
+  margin-left: 2em;
 }
 .campus-col img {
   width: 100%;
@@ -206,6 +231,25 @@ h3 {
 .layer:hover h3 {
   bottom: 49px;
   opacity: 1;
+}
+@media screen and (max-width: 700px) {
+  .campus .row {
+    align-items: center;
+    justify-content: center;
+  }
+  .campus-col {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+  .campus-col.left {
+    margin-right: 0em;
+  }
+  .campus-col.right {
+    margin-left: 0em;
+  }
+  .layer h3 {
+    font-size: 22px;
+  }
 }
 /* campus end */
 
@@ -282,7 +326,7 @@ h3 {
 .cta {
   margin: 100px auto;
   width: 80%;
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/hero-bg.png);
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/online.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 10px;
@@ -324,7 +368,7 @@ h3 {
 .sub-header {
   height: 50vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/home_bg.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/subH.jpg);
   background-position: center;
   background-size: cover;
   text-align: center;
